@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+      <h:head>
+        <title>Stepper1</title>
+        <link rel="stylesheet" type="text/css" href="resources/stylesheets/main.css"/>
+    </h:head>
+    <h:body>
+        <div class="pageTitle">Stepper 1 Control</div>
+
+        <h:form>
+            <div class="mainBlock">
+                <div class="button1Box" >
+                    <h:commandButton styleClass="button1" value="Move indicated number of steps" action="#{mainSessionBean.moveSteps}" />
+                </div>
+
+                <div class="rotateCheckbox">
+                    Rotate Clockwise: <h:selectBooleanCheckbox label="Rotate Clockwise"  value="#{mainSessionBean.rotateClockwise}" />
+                </div>
+
+                <div class="numSteps">
+                    Number of Steps to move: <h:inputText value="#{mainSessionBean.numberOfSteps}" >
+                        <f:convertNumber integerOnly="true" />
+                    </h:inputText>
+                </div>
+
+                <div class="speedDropdown">
+                    RotationSpeed: <h:selectOneMenu value="#{mainSessionBean.stepSpeed}">
+                        <f:selectItem itemValue="fast" itemLabel="Fast" />
+                        <f:selectItem itemValue="medium" itemLabel="Medium" />
+                        <f:selectItem itemValue="slow" itemLabel="Slow" />
+                    </h:selectOneMenu>
+                </div>
+                =======
+                xmlns:h="http://java.sun.com/jsf/html">
+                <h:head>
+                    <title>Web GPIO</title>
+                    <link rel="stylesheet" type="text/css" href="resources/stylesheets/main.css"/>
+                </h:head>
+                <h:body>
+                    <div class="pageTitle">Web GPIO</div>
+
+                    <h:form>
+                        <div class="mainBlock">
+                            <div class="button1Box" >
+                                <h:commandButton styleClass="button1" value="Blink GPIO 7" action="#{mainSessionBean.blink7}" />
+                            </div>
+
+                            <div class="button1Box" >
+                                <h:commandButton styleClass="button1" value="GPIO 0 On" action="#{mainSessionBean.pin0On}" />
+                            </div>
+
+                            <div class="button1Box" >
+                                <h:commandButton styleClass="button1" value="GPIO 0 Off" action="#{mainSessionBean.pin0Off}" />
+                            </div>
+
+                            <div class="button1Box" >
+                                <h:commandButton styleClass="button1" value="Blink 2, 3, 4" action="#{mainSessionBean.blink234}" />
+                            </div>
+
+                            >>>>>>> branch 'master' of https://github.com/rfincher/WebGPIO2.git
+
+                        </div>
+                    </h:form>
+                </h:body>
+                </html>
+
